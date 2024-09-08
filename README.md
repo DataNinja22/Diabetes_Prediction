@@ -3,102 +3,118 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Diabetes Prediction App</title>
+    <title>Diabetes Prediction App - README</title>
     <style>
         body {
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #f0f0f0;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-        }
-
-        .container {
-            background-color: white;
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            width: 100%;
-            max-width: 400px;
-        }
-
-        h1 {
-            text-align: center;
+            background-color: #f9f9f9;
             color: #333;
         }
-
-        label {
-            margin-top: 10px;
-            display: block;
-            color: #555;
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         }
-
-        input[type="number"], input[type="text"], input[type="submit"] {
-            width: 100%;
-            padding: 10px;
-            margin-top: 5px;
-            border-radius: 5px;
-            border: 1px solid #ccc;
+        h1, h2 {
+            color: #007BFF;
         }
-
-        input[type="submit"] {
-            background-color: #28a745;
-            color: white;
-            cursor: pointer;
-            border: none;
+        h1 {
+            margin-top: 0;
         }
-
-        input[type="submit"]:hover {
-            background-color: #218838;
+        ul {
+            list-style-type: none;
+            padding-left: 0;
         }
-
-        .result {
-            margin-top: 20px;
-            padding: 10px;
-            background-color: #f8f9fa;
-            border: 1px solid #ddd;
-            border-radius: 5px;
-            text-align: center;
+        li {
+            margin-bottom: 10px;
+        }
+        a {
+            color: #007BFF;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
         }
     </style>
 </head>
 <body>
-
     <div class="container">
-        <h1>Diabetes Prediction</h1>
+        <h1>Diabetes Prediction App</h1>
+        
+        <h2>Introduction</h2>
+        <p>
+            The Diabetes Prediction App is a web-based application that uses machine learning to predict the likelihood of diabetes in a patient based on various medical attributes.
+        </p>
 
-        <form action="/predict" method="POST">
-            <label for="pregnancies">Number of Pregnancies:</label>
-            <input type="number" id="pregnancies" name="pregnancies" required>
+        <h2>Features</h2>
+        <ul>
+            <li>Predicts the likelihood of diabetes based on user input.</li>
+            <li>User-friendly interface created with Streamlit.</li>
+            <li>Utilizes a machine learning model for predictions.</li>
+            <li>Displays results instantly after user input.</li>
+        </ul>
 
-            <label for="glucose">Glucose Level:</label>
-            <input type="number" id="glucose" name="glucose" required>
+        <h2>Requirements</h2>
+        <ul>
+            <li>Python 3.7+</li>
+            <li>Streamlit 1.0+</li>
+            <li>Scikit-learn 0.24+</li>
+            <li>Pandas 1.3+</li>
+            <li>Numpy 1.21+</li>
+        </ul>
 
-            <label for="bloodPressure">Blood Pressure:</label>
-            <input type="number" id="bloodPressure" name="bloodPressure" required>
+        <h2>Installation</h2>
+        <ol>
+            <li>Clone the repository:
+                <pre><code>git clone https://github.com/yourusername/diabetes-prediction-app.git</code></pre>
+            </li>
+            <li>Navigate into the project directory:
+                <pre><code>cd diabetes-prediction-app</code></pre>
+            </li>
+            <li>Create and activate a virtual environment (optional):
+                <pre><code>python3 -m venv venv
+source venv/bin/activate   # On Windows: venv\Scripts\activate</code></pre>
+            </li>
+            <li>Install dependencies:
+                <pre><code>pip install -r requirements.txt</code></pre>
+            </li>
+            <li>Run the Streamlit app:
+                <pre><code>streamlit run app.py</code></pre>
+            </li>
+        </ol>
 
-            <label for="skinThickness">Skin Thickness:</label>
-            <input type="number" id="skinThickness" name="skinThickness" required>
+        <h2>Usage</h2>
+        <p>
+            Once the app is running, open it in your browser. Enter your medical information in the provided fields and click "Predict" to receive a diabetes prediction.
+        </p>
 
-            <label for="insulin">Insulin Level:</label>
-            <input type="number" id="insulin" name="insulin" required>
+        <h2>Dataset</h2>
+        <p>
+            The model is trained on the <a href="https://www.kaggle.com/uciml/pima-indians-diabetes-database" target="_blank">Pima Indians Diabetes Dataset</a>.
+        </p>
 
-            <label for="bmi">BMI:</label>
-            <input type="text" id="bmi" name="bmi" required>
+        <h2>Model</h2>
+        <p>
+            The app uses a Logistic Regression model trained with Scikit-learn. You can find the model details and code in the `model.py` file.
+        </p>
 
-            <label for="age">Age:</label>
-            <input type="number" id="age" name="age" required>
+        <h2>Future Enhancements</h2>
+        <ul>
+            <li>Implement additional machine learning algorithms.</li>
+            <li>Optimize model performance with hyperparameter tuning.</li>
+            <li>Add data visualization for better insights.</li>
+            <li>Deploy the app to a cloud platform.</li>
+        </ul>
 
-            <input type="submit" value="Predict">
-        </form>
-
-        <div class="result">
-            <!-- The prediction result will be displayed here -->
-        </div>
+        <h2>License</h2>
+        <p>
+            This project is licensed under the MIT License. See the <a href="LICENSE">LICENSE</a> file for more details.
+        </p>
     </div>
-
 </body>
 </html>
