@@ -3,11 +3,11 @@ import pandas as pd
 import pickle
 
 # Loading the trained model
-with open('E:/Data Science/Projects/Logistic regression/Diabetes prediction/Models/Diabetes.pkl', 'rb') as model_file:
+with open('Models/Diabetes.pkl', 'rb') as model_file:
     model = pickle.load(model_file)
 
 # Loading the scaler
-with open('E:/Data Science/Projects/Logistic regression/Diabetes prediction/Models/standardScalar.pkl', 'rb') as scaler_file: 
+with open('Models/standardScalar.pkl', 'rb') as scaler_file: 
     scaler = pickle.load(scaler_file)
 
 st.set_page_config(page_title='Diabetes Prediction App', page_icon='💉', layout='centered')
